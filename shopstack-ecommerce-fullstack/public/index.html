@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopStack - E-Commerce</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="/">ShopStack</a>
+
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search products...">
+        <button id="searchButton">Search</button>
+      </div>
+
+      <nav>
+        <button class="nav-btn" id="ordersBtn">Orders</button>
+        <button class="nav-btn" id="authBtn">Login</button>
+        <button class="cart-btn" id="cartBtn">Cart <span id="cartCount">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <p class="eyebrow">SMART SHOPPING</p>
+          <h1>Everything you need.<br><span>One simple store.</span></h1>
+          <p>Discover electronics, fashion, computers and home essentials.</p>
+          <button class="primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CATALOG</p>
+          <h2>Featured Products</h2>
+        </div>
+        <div id="categories" class="categories"></div>
+      </div>
+
+      <div id="products" class="product-grid"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" onclick="closeModal()">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
